@@ -605,7 +605,7 @@ public class Defaults {
             return p.getOption(op).orElse("");
         }
         if (token.startsWith("perm") && token.contains("_")) {
-            String op = token.substring(token.indexOf("_"));
+            String op = token.substring(token.indexOf("_") + 1);
             return p.getPermissionValue(p.getActiveContexts(), op).toString();
         }
         switch (token) {
